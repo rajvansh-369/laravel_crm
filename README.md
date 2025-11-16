@@ -34,7 +34,7 @@ This is the recommended way to run the project for a consistent development envi
 
 1.  **Clone the repository:**
     ```
-    git clone (https://github.com/rajvansh-369/laravel_crm)
+    git clone https://github.com/rajvansh-369/laravel_crm
     cd your-repository
     ```
 
