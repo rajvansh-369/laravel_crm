@@ -20,8 +20,7 @@ Make sure you have the following software installed on your machine:
 *   [Git](https://git-scm.com/)
 *   [PHP](https://www.php.net/downloads.php) (>= 8.1)
 *   [Composer](https://getcomposer.org/)
-*   [Node.js](https://nodejs.org/) and [NPM](https://www.npmjs.com/)
-*   A database server (e.g., MySQL, PostgreSQL)
+*   A database server (e.g., MySQL)
 
 For the Docker setup, you only need:
 *   [Docker](https://www.docker.com/products/docker-desktop)
