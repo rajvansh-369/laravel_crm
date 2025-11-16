@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel_app
+    working_dir: /var/www/html
+    volumes:
+      - ./:/var/www/html
+    ports: # Expose the port for php artisan serve
+      - "8000:8000"
+    command: php artisan serve --host=0.0.0.0 --port=8000 # Run the dev server
+    depends_on:
+      - db
+    networks:
+      - appnet
+
+  db:
+    image: mysql:8.0
+    container_name: laravel_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: contacts
+      MYSQL_USER: laraveluser
+      MYSQL_PASSWORD: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    networks:
+      - appnet
+
+volumes:
+  dbdata:
+
+networks:
+  appnet:
+    driver: bridge
